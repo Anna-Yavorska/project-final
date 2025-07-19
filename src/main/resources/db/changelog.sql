@@ -329,8 +329,3 @@ values ('todo', 'ToDo', 3, 'in_progress,canceled|'),
 
 drop index UK_USER_BELONG;
 create unique index UK_USER_BELONG on USER_BELONG (OBJECT_ID, OBJECT_TYPE, USER_ID, USER_TYPE_CODE) where ENDPOINT is null;
-
-insert into ACTIVITY (AUTHOR_ID, TASK_ID, UPDATED, STATUS_CODE)
-values (2, 1, '2023-07-19 19:05:10.000000', 'in_progress'),
-       (2, 1, '2023-07-19 19:15:10.000000', 'ready_for_review'),
-       (2, 1, '2023-07-19 19:25:10.000000', 'done');
